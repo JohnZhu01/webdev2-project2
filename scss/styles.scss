@@ -1,3 +1,17 @@
 @use 'normalize';
 
 @use 'base';
+// part A
+@use 'header';
+@use 'hero';
+@use 'our-team';
+
+// part B 
+@use 'our-expertise';
+@use 'our-services';
+@use 'kvant-by-the-numbers';
+
+// part C
+@use 'client-testimonials';
+@use 'contact-us';
+@use 'footer';
