@@ -32,5 +32,8 @@ ul {
 }
 
 button {
+  border: none;
+  color: $text-color;
+  background-color: initial;
   cursor: pointer;
 }

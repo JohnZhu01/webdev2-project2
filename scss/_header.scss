@@ -1,1 +1,46 @@
+@use 'variable' as *;
 
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2.5rem 1rem 1rem;
+  background-color: $background-color;
+}
+
+.header-logo {
+  width: 7.75rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.header-button-group {
+  position: absolute;
+  bottom: 13px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-button {
+  font-family: $subheading-font;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  background-color: #fff;
+  box-shadow: rgba(40, 40, 40, 0.05) 0 3px 3px .1px;
+}
+
+.header-language-button {
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.header-menu-button {
+  padding: 8px 12px;
+  font-weight: 400;
+  border-radius: 28px;
+}
