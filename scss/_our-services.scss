@@ -1,1 +1,43 @@
+@use 'variable' as *;
 
+.our-services-section {
+  padding: $space-md;
+
+  h2 {
+    font-family: $subheading-font;
+    font-size: 5rem;
+  }
+
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+  }
+
+  .services-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+
+    h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    img {
+      width: 30vw;
+      height: auto;
+      align-self: center;
+    }
+    p,
+    a {
+      font-family: $body-font;
+      font-size: 1.5rem;
+      padding: $space-md;
+    }
+  }
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
