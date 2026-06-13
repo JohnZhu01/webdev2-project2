@@ -4,8 +4,7 @@
   padding: $space-md;
 
   h2 {
-    font-family: $subheading-font;
-    font-size: 5rem;
+    @include section-heading;
   }
 
   .services-wrapper {
@@ -47,13 +46,9 @@
       text-decoration: underline;
 
       &::before {
-        content: '';
-        position: absolute;
+        @include square-bullet;
         top: 50%;
         left: $space-sm;
-        width: 1rem;
-        height: 1rem;
-        background-color: black;
         transform: translateY(-50%);
       }
     }

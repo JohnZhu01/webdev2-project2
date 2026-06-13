@@ -3,8 +3,7 @@
 .our-expertise-section {
   padding: $space-md;
   h2 {
-    font-family: $subheading-font;
-    font-size: 5rem;
+    @include section-heading;
   }
 
   .expertise-card {
