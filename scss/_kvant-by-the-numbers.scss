@@ -6,20 +6,40 @@
     font-size: 3rem;
     text-align: center;
   }
+
+  dl {
+    @media (min-width: $medium) {
+      display: flex;
+    }
+  }
+
   .numbers-card {
     @include card;
     gap: $space-lg;
     margin: $space-md;
     height: 15rem;
+
+    @media (min-width: $medium) {
+      flex: 1;
+      height: $desktop-card-height;
+    }
+
     dt {
       font-size: 4rem;
+       @media (min-width: $medium) {
+       font-size: 6rem;
+      }
     }
     dd {
+      font-family: $body-font;
       position: relative;
       margin-left: 0;
       padding-left: $space-md;
-      font-family: $body-font;
-      font-size: 1.5rem;
+      font-size: 2rem;
+
+      @media (min-width: $medium) {
+        margin-top: auto;
+      }
 
       &::before {
         @include square-bullet;

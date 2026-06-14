@@ -23,6 +23,9 @@ $space-lg: 2rem;
 $space-xl: 4rem;
 $space-2xl: 6rem;
 
+// Component sizes
+$desktop-card-height: 42rem;
+
 // Mixin styles
 @mixin section-heading {
   font-family: $subheading-font;
