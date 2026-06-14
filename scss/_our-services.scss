@@ -35,15 +35,17 @@
     }
 
     h3 {
+      font-family: $subheading-font;
       font-size: 2rem;
       text-align: center;
     }
+
     img {
       width: 30vw;
       max-width: 9rem;
       height: auto;
       align-self: center;
-    
+
       @media (min-width: $medium) {
         width: 100%;
         max-width: 12rem;
@@ -55,6 +57,7 @@
     p {
       font-family: $body-font;
       font-size: 1.5rem;
+      line-height: 1.4;
       padding: $space-md;
     }
 
@@ -64,6 +67,7 @@
       padding: $space-sm $space-sm $space-sm 3rem;
       font-family: $body-font;
       font-size: 1.5rem;
+      line-height: 1.4;
       font-weight: bold;
       text-decoration: underline;
 

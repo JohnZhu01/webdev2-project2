@@ -1,22 +1,27 @@
 @use 'variable' as *;
 
 .numbers-section {
+  padding: $space-md;
+
   h2 {
-    font-family: $subheading-font;
-    font-size: 3rem;
+    @include section-heading;
     text-align: center;
   }
 
   dl {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+
     @media (min-width: $medium) {
-      display: flex;
+      flex-direction: row;
+      gap: 0;
     }
   }
 
   .numbers-card {
     @include card;
     gap: $space-lg;
-    margin: $space-md;
     height: 15rem;
 
     @media (min-width: $medium) {
@@ -26,16 +31,19 @@
 
     dt {
       font-size: 4rem;
-       @media (min-width: $medium) {
-       font-size: 6rem;
+
+      @media (min-width: $medium) {
+        font-size: 6rem;
       }
     }
+
     dd {
       font-family: $body-font;
       position: relative;
       margin-left: 0;
       padding-left: $space-md;
-      font-size: 2rem;
+      font-size: 1.5rem;
+      line-height: 1.4;
 
       @media (min-width: $medium) {
         margin-top: auto;
