@@ -4,7 +4,9 @@
 // part A
 @use 'header';
 @use 'hero';
+@use 'our-clients';
 @use 'our-team';
+
 
 // part B 
 @use 'our-expertise';
@@ -12,6 +14,7 @@
 @use 'kvant-by-the-numbers';
 
 // part C
-@use 'our-clients';
+
+@use 'client-testimonials';
 @use 'contact-us';
 @use 'footer';
