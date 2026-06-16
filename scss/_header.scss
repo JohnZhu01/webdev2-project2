@@ -54,6 +54,12 @@
   border-radius: 1.75rem;
 }
 
+.header-menu-close-button {
+  padding: 8px 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .header-language-menu {
   position: absolute;
   top: calc(100% + 0.5rem);
@@ -101,5 +107,44 @@
 .header-menu-menu {
   position: absolute;
   top: calc(100% + 0.5rem);
-  right: 0;
+  right: -1rem;
+  padding: 3rem 1.5rem;
+  width: 100vw;
+  height: 100vh;
+  font-size: 0.8125rem;
+  font-family: $subheading-font;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: $background-color;
+
+  ul {
+    margin: 0 auto 2.5rem;
+    max-width: 342px;
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    li:first-child {
+      margin-bottom: 1.5rem;
+      vertical-align: middle;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        position: relative;
+        top: 1px;
+        margin-right: 0.5rem;
+        width: 0.6875rem;
+        height: 0.6875rem;
+        background-color: $text-color;
+      }
+    }
+  }
+}
+
+@media (max-width: $medium) {
+  .is-menu-open {
+    overflow: hidden;
+  }
 }
