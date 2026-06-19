@@ -108,7 +108,6 @@
   position: absolute;
   top: calc(100% + 0.5rem);
   right: -1rem;
-  padding: 3rem 1.5rem;
   width: 100vw;
   height: 100vh;
   font-size: 0.8125rem;
@@ -117,17 +116,56 @@
   text-transform: uppercase;
   background-color: $background-color;
 
+  @media (min-width: $large) {
+    backdrop-filter: blur(30px);
+    background-color: rgba(40, 40, 40, 0.05);
+  }
+
+  .header-menu-menu-wrapper {
+    max-width: 21.375rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    border-radius: 0.5rem;
+
+    @media (min-width: $large) {
+      min-width: 37.5rem;
+      margin: 1rem 2.5rem 0 auto;
+      padding: 4rem 2.5rem;
+      font-size: 1rem;
+      background-color: #fff;
+    }
+  }
+
   ul {
-    margin: 0 auto 2.5rem;
-    max-width: 342px;
+    margin-bottom: 2.5rem;
+
+    @media (min-width: $large) {
+      display: grid;
+      grid-template-columns: 10.5rem 1fr;
+      gap: 1rem;
+      margin-bottom: 4rem;
+
+      li:not(:first-child) {
+        grid-column: 2;
+      }
+    }
 
     li {
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
+
+      @media (min-width: $large) {
+        margin: unset;
+      }
     }
 
     li:first-child {
       margin-bottom: 1.5rem;
       vertical-align: middle;
+
+      @media (min-width: $large) {
+        margin: unset;
+        grid-column: 1;
+      }
 
       &::before {
         content: '';
@@ -143,8 +181,6 @@
   }
 }
 
-@media (max-width: $medium) {
-  .is-menu-open {
-    overflow: hidden;
-  }
+.is-menu-open {
+  overflow: hidden;
 }
