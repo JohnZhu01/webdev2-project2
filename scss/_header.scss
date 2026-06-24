@@ -6,6 +6,7 @@
   width: 100%;
   padding: 2.5rem 1rem 1rem;
   background-color: $background-color;
+  z-index: 1;
 }
 
 .header-logo {
@@ -121,21 +122,6 @@
     background-color: rgba(40, 40, 40, 0.05);
   }
 
-  .header-menu-menu-wrapper {
-    max-width: 21.375rem;
-    margin: 0 auto;
-    padding: 3rem 0;
-    border-radius: 0.5rem;
-
-    @media (min-width: $large) {
-      min-width: 37.5rem;
-      margin: 1rem 2.5rem 0 auto;
-      padding: 4rem 2.5rem;
-      font-size: 1rem;
-      background-color: #fff;
-    }
-  }
-
   ul {
     margin-bottom: 2.5rem;
 
@@ -178,6 +164,21 @@
         background-color: $text-color;
       }
     }
+  }
+}
+
+.header-menu-menu-wrapper {
+  max-width: 21.375rem;
+  margin: 0 auto;
+  padding: 3rem 0;
+  border-radius: 0.5rem;
+
+  @media (min-width: $large) {
+    min-width: 37.5rem;
+    margin: 1rem 2.5rem 0 auto;
+    padding: 4rem 2.5rem;
+    font-size: 1rem;
+    background-color: #fff;
   }
 }
 
