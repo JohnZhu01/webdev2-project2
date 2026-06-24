@@ -79,4 +79,8 @@
 .hero-button-group {
   margin: 0 auto;
   text-align: center;
+
+  a:first-child {
+    margin-right: 0.75rem;
+  }
 }
