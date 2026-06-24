@@ -9,6 +9,18 @@
     font-size: 1.125rem;
     font-weight: 600;
     text-align: center;
+
+    @media (min-width: $large) {
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: $extra-large) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  span {
+    display: block;
   }
 }
 
@@ -21,7 +33,13 @@
   text-transform: uppercase;
   line-height: 2rem;
 
-  span {
-    display: block;
+  @media (min-width: $large) {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  @media (min-width: $extra-large) {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }
