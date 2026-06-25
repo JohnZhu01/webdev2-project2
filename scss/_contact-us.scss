@@ -1,1 +1,188 @@
+@use "variable" as *;
 
+.contact-us {
+  padding: 5rem 0 4rem;
+  margin: 0;
+
+  &-heading {
+    font-family: $heading-font;
+    font-weight: 500;
+    font-size: $space-lg;
+    color: $text-color;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 2.45rem;
+  }
+
+  &-intro {
+    font-family: $body-font;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: $text-color;
+    line-height: 1;
+    max-width: 288px;
+    margin: 0 auto 2.55rem;
+    text-align: center;
+  }
+
+  &-content {
+    width: 288px;
+    margin: 0 auto;
+  }
+
+  &-form {
+    display: grid;
+    padding-bottom: 2.5rem;
+  }
+
+  &-subheading {
+    font-family: $body-font;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: $text-color;
+    margin: 0 0 2.4rem;
+  }
+
+  label {
+    font-family: $subheading-font;
+    font-size: 0.8125rem; // 13px
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: $text-color;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: none;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-family: $body-font;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: white;
+    box-sizing: border-box;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #999999;
+    font-size: 0.75rem;
+  }
+
+  select {
+    color: #999999;
+    font-size: 0.75rem;
+    background-color: white;
+  }
+
+  textarea {
+    min-height: 86px;
+    resize: vertical;
+  }
+
+  button {
+  justify-self: end;
+  border: none;
+  padding: 0.8rem 1rem;
+  width: fit-content;
+  background-color: #999999;
+  color: white;
+  font-family: $body-font;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-us-image {
+  display: block;
+  width: 288px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+}
+
+@media (min-width: 768px) {
+  .contact-us {
+    padding-top: 5.25rem;
+
+    &-heading {
+      margin-bottom: 2.6rem;
+    }
+
+    &-intro {
+      max-width: 30rem; // 480px
+      margin-bottom: 3.8rem;
+      font-size: 0.875rem; // 14px
+      line-height: 1.15;
+    }
+
+    &-content {
+      width: 100%;
+    }
+
+    &-form {
+      width: calc(100% - 2rem);
+      max-width: 34rem;
+      margin: 0 auto;
+      padding-bottom: 1.5rem;
+    }
+
+    &-subheading {
+      margin-bottom: 2.6rem;
+    }
+
+    .contact-us-image {
+      width: calc(100% - 2rem);
+      max-width: 46rem; // 736px
+      height: 57.5rem; // 920px
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .contact-us {
+    padding: 4.5rem 0 5rem;
+
+    &-heading {
+      font-size: 3rem;
+    }
+
+    &-intro {
+      margin-bottom: 3.25rem;
+      font-size: 1rem;
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: 28rem 28.75rem;
+      justify-content: center;
+      align-items: start;
+      gap: 2.5rem;
+      width: 100%;
+    }
+
+    &-form {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding-bottom: 0;
+    }
+
+    button {
+      justify-self: center;
+    }
+
+    .contact-us-image {
+      width: 28.75rem;
+      height: 35.9375rem;
+      margin: 0;
+    }
+  }
+}
