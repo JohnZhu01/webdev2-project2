@@ -1,3 +1,15 @@
+// Header Start
+import { initHeader } from "./header.js";
+initHeader();
+// Header End
+
+// Our Clients Start
+import { initOurClients } from "./ourClients.js";
+initOurClients();
+// Our Clients End
+
+// Client Testimonials Start
+
 const testimonialSection = document.querySelector(".client-testimonials");
 
 if (testimonialSection) {
@@ -10,9 +22,13 @@ if (testimonialSection) {
 
     nextButton.addEventListener("click", () => {
       testimonialCards[activeTestimonial].classList.remove("is-active");
+
       activeTestimonial = (activeTestimonial + 1) % testimonialCards.length;
+
       testimonialCards[activeTestimonial].classList.add("is-active");
       testimonialCards[activeTestimonial].appendChild(nextButton);
     });
   }
 }
+
+// Client Testimonials End
