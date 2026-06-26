@@ -18,7 +18,8 @@
   .testimonial-card {
     display: none;
     position: relative;
-    width: min(100%, 18rem);
+    width: 100%;
+    max-width: 18rem;
     min-height: 33.5rem;
     margin: 0 auto;
     padding: 2.75rem 1rem 4.25rem;
@@ -30,11 +31,9 @@
   .testimonial-card.is-active {
     display: flex;
     flex-direction: column;
-    animation: testimonial-slide 0.35s ease;
   }
 
   .testimonial-quote {
-    display: block;
     width: 4.5rem;
     height: 4rem;
     margin: 0;
@@ -49,7 +48,7 @@
     display: block;
     width: 7.75rem;
     height: 4.5rem;
-    margin: 1.05rem 0 1.9rem;
+    margin: 1rem 0 1.9rem;
     object-fit: contain;
     object-position: left center;
     filter: brightness(0);
@@ -70,9 +69,9 @@
 
   .testimonial-name {
     position: relative;
-    margin: auto 0 0 0.9rem;
+    margin-top: auto;
+    margin-bottom: 0.9rem;
     padding-left: 1.3rem;
-    transform: translateY(1.75rem);
     font-family: $subheading-font;
     font-size: 0.8125rem;
     line-height: 1.3;
@@ -91,9 +90,7 @@
 
   .testimonial-title,
   .testimonial-company {
-    width: calc(100% - 4.75rem);
     margin: 0;
-    transform: translateY(1.75rem);
     font-family: $subheading-font;
     font-size: 0.8125rem;
     line-height: 1.1;
@@ -121,30 +118,13 @@
     color: $text-color;
     font-family: $subheading-font;
     font-size: 0.8125rem;
-    line-height: 1;
     text-transform: uppercase;
     cursor: pointer;
   }
 
   &-next::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 0.35rem solid transparent;
-    border-bottom: 0.35rem solid transparent;
-    border-left: 0.45rem solid $text-color;
-  }
-}
-
-@keyframes testimonial-slide {
-  from {
-    opacity: 0;
-    transform: translateX(1.25rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
+    content: ">";
+    font-size: 0.8125rem;
   }
 }
 
@@ -157,7 +137,6 @@
     }
 
     .testimonial-card {
-      width: calc(100% - 2rem);
       max-width: 46rem;
       min-height: 18.75rem;
       padding: 2.6rem 1rem 2.25rem;
@@ -185,13 +164,6 @@
     .testimonial-name {
       margin-top: 6rem;
       margin-bottom: 1.6rem;
-      transform: none;
-    }
-
-    .testimonial-title,
-    .testimonial-company {
-      width: calc(100% - 7rem);
-      transform: none;
     }
 
     .testimonial-title {
@@ -223,9 +195,7 @@
     .testimonial-card.is-active {
       display: grid;
       grid-template-columns: 31rem 1fr;
-      grid-template-rows: auto auto 1fr auto auto;
       column-gap: 2.5rem;
-      align-items: start;
     }
 
     .testimonial-quote {
@@ -240,7 +210,6 @@
     .testimonial-logo {
       grid-column: 2;
       grid-row: 2;
-      align-self: center;
       justify-self: end;
       width: 7.75rem;
       height: auto;
@@ -261,17 +230,15 @@
 
     .testimonial-name {
       grid-column: 1;
-      grid-row: 4;
-      margin: 5rem 0 1.55rem;
-      transform: none;
+      grid-row: 3;
+      margin-top: 5rem;
+      margin-bottom: 1.55rem;
     }
 
     .testimonial-title,
     .testimonial-company {
       grid-column: 1;
-      grid-row: 5;
-      width: auto;
-      transform: none;
+      grid-row: 4;
     }
 
     .testimonial-company {

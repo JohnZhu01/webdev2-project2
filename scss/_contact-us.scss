@@ -45,7 +45,7 @@
 
   label {
     font-family: $subheading-font;
-    font-size: 0.8125rem; // 13px
+    font-size: 0.8125rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
     color: $text-color;
@@ -83,28 +83,27 @@
   }
 
   button {
-  justify-self: end;
-  border: none;
-  padding: 0.8rem 1rem;
-  width: fit-content;
-  background-color: #999999;
-  color: white;
-  font-family: $body-font;
-  font-size: 0.875rem;
-  font-weight: 700;
-  border-radius: 6px;
-  cursor: pointer;
-}
+    justify-self: end;
+    border: none;
+    padding: 0.8rem 1rem;
+    width: fit-content;
+    background-color: #999999;
+    color: white;
+    font-family: $body-font;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+  }
 
-.contact-us-image {
-  display: block;
-  width: 288px;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 0 auto;
-  margin-top: 2rem;
-}
+  .contact-us-image {
+    display: block;
+    width: 288px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 2rem auto 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -116,9 +115,9 @@
     }
 
     &-intro {
-      max-width: 30rem; // 480px
+      max-width: 30rem;
       margin-bottom: 3.8rem;
-      font-size: 0.875rem; // 14px
+      font-size: 0.875rem;
       line-height: 1.15;
     }
 
@@ -127,7 +126,7 @@
     }
 
     &-form {
-      width: calc(100% - 2rem);
+      width: 100%;
       max-width: 34rem;
       margin: 0 auto;
       padding-bottom: 1.5rem;
@@ -138,9 +137,9 @@
     }
 
     .contact-us-image {
-      width: calc(100% - 2rem);
-      max-width: 46rem; // 736px
-      height: 57.5rem; // 920px
+      width: 100%;
+      max-width: 46rem;
+      height: 58rem;
       margin-top: 2.5rem;
     }
   }
@@ -181,7 +180,7 @@
 
     .contact-us-image {
       width: 28.75rem;
-      height: 35.9375rem;
+      height: 36rem;
       margin: 0;
     }
   }
