@@ -1,0 +1,59 @@
+@use 'variable' as *;
+
+.numbers-section {
+  padding: $space-md;
+
+  h2 {
+    @include section-heading;
+    text-align: center;
+  }
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+
+    @media (min-width: $medium) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  .numbers-card {
+    @include card;
+    gap: $space-lg;
+    height: 15rem;
+
+    @media (min-width: $medium) {
+      flex: 1;
+      height: $desktop-card-height;
+    }
+
+    dt {
+      font-size: 4rem;
+
+      @media (min-width: $medium) {
+        font-size: 6rem;
+      }
+    }
+
+    dd {
+      font-family: $body-font;
+      position: relative;
+      margin-left: 0;
+      padding-left: $space-md;
+      font-size: 1.5rem;
+      line-height: 1.4;
+
+      @media (min-width: $medium) {
+        margin-top: auto;
+      }
+
+      &::before {
+        @include square-bullet;
+        top: 0.5rem;
+        left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use 'variable' as *;
+
+.hero {
+  padding-top: 3rem;
+
+  @media (min-width: $large) {
+    padding-top: 8rem;
+  }
+}
+
+.hero-content {
+  padding-bottom: 6rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    line-height: 2.25rem;
+
+    @media (min-width: $large) {
+      font-size: 3.5rem;
+
+      span:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @media (min-width: $extra-large) {
+      font-size: 4.5rem;
+
+      span:first-child {
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 0.8125rem;
+    font-weight: 300;
+    font-family: $subheading-font;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $extra-large) {
+      font-size: 1rem;
+    }
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.hero-media {
+  height: 22.375rem;
+  margin: 0 1rem;
+  overflow: hidden;
+  border-radius: 10px;
+
+  @media (min-width: $medium) {
+    margin: 0 1.5rem;
+  }
+
+  @media (min-width: $large) {
+    margin: 0 2.5rem;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero-button-group {
+  margin: 0 auto;
+  text-align: center;
+
+  a:first-child {
+    margin-right: 0.75rem;
+  }
+}

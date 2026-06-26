@@ -1,14 +1,15 @@
 @use 'normalize';
 
 @use 'base';
-
+@use 'components';
 
 // part A
 @use 'header';
 @use 'hero';
+@use 'our-clients';
 @use 'our-team';
 
-// part B 
+// part B
 @use 'our-expertise';
 @use 'our-services';
 @use 'kvant-by-the-numbers';
@@ -16,4 +17,4 @@
 // part C
 @use 'client-testimonials';
 @use 'contact-us';
-@use 'footer'
+@use 'footer';

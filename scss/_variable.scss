@@ -14,6 +14,7 @@ $body-font: 'Inter Tight', sans-serif;
 $small: 0rem;
 $medium: 48rem;
 $large: 64rem;
+$extra-large: 90rem;
 
 // Spacing
 $space-xs: 0.5rem;
@@ -22,3 +23,27 @@ $space-md: 1.5rem;
 $space-lg: 2rem;
 $space-xl: 4rem;
 $space-2xl: 6rem;
+
+// Component sizes
+$desktop-card-height: 42rem;
+
+// Mixin styles
+@mixin section-heading {
+  font-family: $subheading-font;
+  font-size: 3rem;
+}
+
+@mixin card {
+  display: flex;
+  flex-direction: column;
+  padding: $space-md;
+  background-color: white;
+}
+
+@mixin square-bullet($size: 1rem) {
+  content: '';
+  position: absolute;
+  width: $size;
+  height: $size;
+  background-color: black;
+}

@@ -1,0 +1,128 @@
+@use "variable" as *;
+
+.footer {
+  padding: 6.75rem 1rem 0;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $subheading-font;
+  text-transform: uppercase;
+
+  > #services-card {
+    display: grid;
+    gap: 1.45rem;
+    width: min(18rem, 100%);
+    margin: 0 auto;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  h2 {
+    position: relative;
+    margin: 0 0 0.65rem;
+    padding-left: 1.1rem;
+    font-family: $subheading-font;
+    font-size: 0.8125rem; // 13px
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.28rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: $text-color;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.3rem;
+  }
+
+  a,
+  address p {
+    font-size: 0.8125rem; // 13px
+    line-height: 1.35;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  a::before {
+    content: "[";
+  }
+
+  a::after {
+    content: "]";
+  }
+
+  address {
+    margin-top: 1.15rem;
+    font-style: normal;
+  }
+
+  address p {
+    margin: 0 0 0.25rem;
+  }
+
+  .visit-us {
+    color: #9b9b9b;
+    margin-bottom: 0.35rem;
+  }
+
+  > img {
+    display: block;
+    width: min(100%, 18rem);
+    margin: 3.35rem auto 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 8.5rem 1rem 0;
+
+    > #services-card {
+      grid-template-columns: 1fr;
+      gap: 1.45rem;
+      width: 18rem;
+      max-width: none;
+      margin: 0 0 0 1rem;
+    }
+
+    > img {
+      width: 100%;
+      margin: 3.35rem 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .footer {
+    > #services-card {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      width: min(100% - 8rem, 75rem);
+      max-width: none;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    h2,
+    a,
+    address p {
+      font-size: 1rem; // 16px
+    }
+  }
+}

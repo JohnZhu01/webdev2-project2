@@ -1,0 +1,82 @@
+@use 'variable' as *;
+
+.our-services-section {
+  padding: $space-md;
+
+  h2 {
+    @include section-heading;
+  }
+
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+
+    @media (min-width: $medium) {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: $medium) {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .services-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+
+    @media (min-width: $medium) {
+      flex: 1;
+      height: $desktop-card-height;
+    }
+
+    h3 {
+      font-family: $subheading-font;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    img {
+      width: 30vw;
+      max-width: 9rem;
+      height: auto;
+      align-self: center;
+
+      @media (min-width: $medium) {
+        width: 100%;
+        max-width: 12rem;
+        height: 12rem;
+        object-fit: contain;
+      }
+    }
+
+    p {
+      font-family: $body-font;
+      font-size: 1.5rem;
+      line-height: 1.4;
+      padding: $space-md;
+    }
+
+    a {
+      position: relative;
+      margin: 0 $space-md $space-md;
+      padding: $space-sm $space-sm $space-sm 3rem;
+      font-family: $body-font;
+      font-size: 1.5rem;
+      line-height: 1.4;
+      font-weight: bold;
+      text-decoration: underline;
+
+      &::before {
+        @include square-bullet;
+        top: 50%;
+        left: $space-sm;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
