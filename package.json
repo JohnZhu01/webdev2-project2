@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "sass": "sass --watch scss:styles",
+    "build:sass": "sass scss:styles"
+  }
+}
