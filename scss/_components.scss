@@ -1,0 +1,38 @@
+@use 'variable' as *;
+
+.button {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: $body-font;
+  border-radius: 3px;
+  padding: 0.5rem 0.75rem;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    bottom: 1px;
+    margin-right: 0.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: $text-color;
+  }
+}
+
+.dark-button {
+  @extend .button;
+
+  color: #fff;
+  background-color: $text-color;
+
+  &::before {
+    background-color: #fff;
+  }
+}
+
+.light-button {
+  @extend .button;
+
+  border: 1px solid $text-color;
+}
