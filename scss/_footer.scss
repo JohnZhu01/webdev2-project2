@@ -7,10 +7,11 @@
   font-family: $subheading-font;
   text-transform: uppercase;
 
-  > #services-card {
+  #services-card {
     display: grid;
     gap: 1.45rem;
-    width: min(18rem, 100%);
+    width: 288px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -23,7 +24,7 @@
     margin: 0 0 0.65rem;
     padding-left: 1.1rem;
     font-family: $subheading-font;
-    font-size: 0.8125rem; // 13px
+    font-size: 0.8125rem;
     font-weight: 400;
     line-height: 1.35;
   }
@@ -50,7 +51,7 @@
 
   a,
   address p {
-    font-size: 0.8125rem; // 13px
+    font-size: 0.8125rem;
     line-height: 1.35;
   }
 
@@ -83,7 +84,8 @@
 
   > img {
     display: block;
-    width: min(100%, 18rem);
+    width: 100%;
+    max-width: 288px;
     margin: 3.35rem auto 1rem;
   }
 }
@@ -92,16 +94,14 @@
   .footer {
     padding: 8.5rem 1rem 0;
 
-    > #services-card {
-      grid-template-columns: 1fr;
-      gap: 1.45rem;
-      width: 18rem;
-      max-width: none;
-      margin: 0 0 0 1rem;
+    #services-card {
+      width: 288px;
+      margin-left: 1rem;
+      margin-right: 0;
     }
 
     > img {
-      width: 100%;
+      max-width: none;
       margin: 3.35rem 0 1rem;
     }
   }
@@ -109,20 +109,18 @@
 
 @media (min-width: 1920px) {
   .footer {
-    > #services-card {
-      display: grid;
+    #services-card {
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
-      width: min(100% - 8rem, 75rem);
-      max-width: none;
-      justify-content: center;
+      width: 90%;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     h2,
     a,
     address p {
-      font-size: 1rem; // 16px
+      font-size: 1rem;
     }
   }
 }
