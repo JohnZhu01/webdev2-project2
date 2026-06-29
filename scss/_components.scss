@@ -1,6 +1,6 @@
 @use 'variable' as *;
 
-.button {
+@mixin button {
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
@@ -21,7 +21,7 @@
 }
 
 .dark-button {
-  @extend .button;
+  @include button;
 
   color: #fff;
   background-color: $text-color;
@@ -32,7 +32,7 @@
 }
 
 .light-button {
-  @extend .button;
+  @include button;
 
   border: 1px solid $text-color;
 }
