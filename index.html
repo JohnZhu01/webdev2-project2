@@ -21,7 +21,7 @@
       </a>
 
       <div class="header-button-group">
-        <div class="header-language">
+        <div id="header-language">
           <button type="button" id="header-language-btn" class="header-button header-language-button"
             aria-label="Change language" aria-expanded="false" aria-controls="header-language-menu">
             <img src="images/icons/change-language-icon.svg" alt="">
@@ -39,40 +39,40 @@
           </nav>
         </div>
 
-        <div class="header-menu">
-          <button type="button" id="header-menu-btn" class="header-button header-menu-button">Menu</button>
-          <button type="button" id="header-menu-close-btn" class="header-button header-menu-close-button"
+        <div>
+          <button type="button" id="header-nav-btn" class="header-button header-nav-button">Menu</button>
+          <button type="button" id="header-nav-close-btn" class="header-button header-nav-close-button"
             hidden>[Close]</button>
-
-          <nav id="menu-menu" class="header-menu-menu" aria-label="Main navigation" hidden>
-            <div class="header-menu-menu-wrapper">
-              <ul>
-                <li>Services</li>
-                <li><a href="#">[All Services]</a></li>
-                <li><a href="#">[Executive Search]</a></li>
-                <li><a href="#">[Specialist Search]</a></li>
-                <li><a href="#">[Management for Hire]</a></li>
-              </ul>
-              <ul>
-                <li>For Candidates</li>
-                <li><a href="#">[Job Listings]</a></li>
-                <li><a href="#">[Community]</a></li>
-              </ul>
-              <ul>
-                <li>About</li>
-                <li><a href="#">[Company]</a></li>
-                <li><a href="#">[Our Advisors]</a></li>
-                <li><a href="#">[Insights]</a></li>
-              </ul>
-              <ul>
-                <li>Contact</li>
-                <li><a href="#">[Contact us]</a></li>
-              </ul>
-            </div>
-          </nav>
         </div>
       </div>
     </header>
+
+    <nav id="header-nav-panel" class="header-nav-panel" aria-label="Main navigation" hidden>
+      <div class="header-nav-panel-content">
+        <ul>
+          <li>Services</li>
+          <li><a href="#">[All Services]</a></li>
+          <li><a href="#">[Executive Search]</a></li>
+          <li><a href="#">[Specialist Search]</a></li>
+          <li><a href="#">[Management for Hire]</a></li>
+        </ul>
+        <ul>
+          <li>For Candidates</li>
+          <li><a href="#">[Job Listings]</a></li>
+          <li><a href="#">[Community]</a></li>
+        </ul>
+        <ul>
+          <li>About</li>
+          <li><a href="#">[Company]</a></li>
+          <li><a href="#">[Our Advisors]</a></li>
+          <li><a href="#">[Insights]</a></li>
+        </ul>
+        <ul>
+          <li>Contact</li>
+          <li><a href="#">[Contact us]</a></li>
+        </ul>
+      </div>
+    </nav>
     <!-- Header End -->
 
     <main>
@@ -101,9 +101,9 @@
         <h2 class="clients-title">Our Clients</h2>
         <div id="clients-carousel" class="clients-carousel">
           <ul id="clients-carousel-track" class="clients-carousel-track">
-            <li><img src="images/credo-logo.webp" alt="Credo logo"></li>
-            <li><img src="images/elkjop-logo.webp" alt="Elkjop logo"></li>
-            <li><img src="images/farmasiet-logo.avif" alt="Farmasiet logo"></li>
+            <li><img src="images/clients/credo-logo.webp" alt="Credo logo"></li>
+            <li><img src="images/clients/elkjop-logo.webp" alt="Elkjop logo"></li>
+            <li><img src="images/clients/farmasiet-logo.avif" alt="Farmasiet logo"></li>
             <li><img src="images/clients/globalconnect-logo.svg" alt="GlobalConnect logo"></li>
             <li><img src="images/clients/harald-a-moller-logo.png" alt="Harald A. Moller logo"></li>
             <li><img src="images/clients/lyse-logo.png" alt="Lyse logo"></li>
@@ -114,8 +114,8 @@
             <li><img src="images/clients/sensio-logo.png" alt="Sensio logo"></li>
             <li><img src="images/clients/startup-lab-logo.png" alt="StartupLab logo"></li>
             <li><img src="images/clients/tine-logo.png" alt="Tine logo"></li>
-            <li><img src="images/Wallenius-Wilhelmsen-logo.avif" alt="Wallenius Wilhelmsen logo"></li>
-            <li><img src="images/wolt-logo.avif" alt="Wolt logo"></li>
+            <li><img src="images/clients/wallenius-wilhelmsen-logo.avif" alt="Wallenius Wilhelmsen logo"></li>
+            <li><img src="images/clients/wolt-logo.avif" alt="Wolt logo"></li>
           </ul>
         </div>
       </section>
@@ -235,7 +235,7 @@
         <article class="testimonial-card is-active">
           <p class="testimonial-quote" aria-hidden="true">“</p>
 
-          <img class="testimonial-logo" src="images/credo-logo.webp" alt="Credo Partners logo" />
+          <img class="testimonial-logo" src="images/clients/credo-logo.webp" alt="Credo Partners logo" />
 
           <blockquote class="testimonial-text">
             <p>
@@ -255,7 +255,7 @@
         <article class="testimonial-card">
           <p class="testimonial-quote" aria-hidden="true">“</p>
 
-          <img class="testimonial-logo" src="images/Wallenius-Wilhelmsen-logo.avif" alt="Wallenius Wilhelmsen logo" />
+          <img class="testimonial-logo" src="images/clients/wallenius-wilhelmsen-logo.avif" alt="Wallenius Wilhelmsen logo" />
 
           <blockquote class="testimonial-text">
             <p>
@@ -275,7 +275,7 @@
         <article class="testimonial-card">
           <p class="testimonial-quote" aria-hidden="true">“</p>
 
-          <img class="testimonial-logo" src="images/wolt-logo.avif" alt="Wolt logo" />
+          <img class="testimonial-logo" src="images/clients/wolt-logo.avif" alt="Wolt logo" />
 
           <blockquote class="testimonial-text">
             <p>
@@ -292,7 +292,7 @@
         <article class="testimonial-card">
           <p class="testimonial-quote" aria-hidden="true">“</p>
 
-          <img class="testimonial-logo" src="images/zaptec-logo.avif" alt="Zaptec logo" />
+          <img class="testimonial-logo" src="images/clients/zaptec-logo.avif" alt="Zaptec logo" />
 
           <blockquote class="testimonial-text">
             <p>
@@ -311,7 +311,7 @@
         <article class="testimonial-card">
           <p class="testimonial-quote" aria-hidden="true">“</p>
 
-          <img class="testimonial-logo" src="images/elkjop-logo.webp" alt="Elkjop logo" />
+          <img class="testimonial-logo" src="images/clients/elkjop-logo.webp" alt="Elkjop logo" />
 
           <blockquote class="testimonial-text">
             <p>
@@ -330,7 +330,7 @@
         <article class="testimonial-card">
           <p class="testimonial-quote" aria-hidden="true">“</p>
 
-          <img class="testimonial-logo" src="images/farmasiet-logo.avif" alt="Farmasiet logo" />
+          <img class="testimonial-logo" src="images/clients/farmasiet-logo.avif" alt="Farmasiet logo" />
 
           <blockquote class="testimonial-text">
             <p>

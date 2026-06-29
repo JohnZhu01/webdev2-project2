@@ -1,13 +1,13 @@
-export function initHeader() {
+export const initHeader = () => {
   const header = document.querySelector('.header')
   const bodyDom = document.querySelector('body')
-  const languageHeader = document.querySelector('.header-language')
+  const languageHeader = document.querySelector('#header-language')
   const languageButton = document.querySelector('#header-language-btn')
   const languageMenu = document.querySelector('#header-language-menu')
-  const menuMenuHeader = document.querySelector('.header-menu-menu')
-  const menuMenuHeaderWrapper = document.querySelector('.header-menu-menu-wrapper')
-  const menuButton = document.querySelector('#header-menu-btn')
-  const menuCloseButton = document.querySelector('#header-menu-close-btn')
+  const navPanel = document.querySelector('.header-nav-panel')
+  const navPanelContent = document.querySelector('.header-nav-panel-content')
+  const navButton = document.querySelector('#header-nav-btn')
+  const navCloseButton = document.querySelector('#header-nav-close-btn')
 
   if (
     !header ||
@@ -15,22 +15,22 @@ export function initHeader() {
     !languageHeader ||
     !languageButton ||
     !languageMenu ||
-    !menuMenuHeader ||
-    !menuMenuHeaderWrapper ||
-    !menuButton ||
-    !menuCloseButton
+    !navPanel ||
+    !navPanelContent ||
+    !navButton ||
+    !navCloseButton
   )
     return
 
   function closeLanguageMenu() {
     languageButton.setAttribute('aria-expanded', 'false')
-    languageMenu.classList.remove('is-open')
+    languageMenu.classList.remove('is-language-open')
   }
 
   function closeMainMenu() {
-    menuCloseButton.hidden = true
-    menuMenuHeader.hidden = true
-    menuButton.hidden = false
+    navCloseButton.hidden = true
+    navPanel.hidden = true
+    navButton.hidden = false
     languageButton.hidden = false
     bodyDom.classList.remove('is-menu-open')
   }
@@ -43,14 +43,14 @@ export function initHeader() {
     const isExpanded = languageButton.getAttribute('aria-expanded') === 'true'
 
     languageButton.setAttribute('aria-expanded', String(!isExpanded))
-    languageMenu.classList.toggle('is-open', !isExpanded)
+    languageMenu.classList.toggle('is-language-open', !isExpanded)
   })
 
   document.addEventListener('click', e => {
     if (isTabletViewport()) return
 
-    const isHeaderClick = header.contains(e.target) && !menuMenuHeader.contains(e.target)
-    const isMenuContentClick = menuMenuHeaderWrapper.contains(e.target)
+    const isHeaderClick = header.contains(e.target)
+    const isMenuContentClick = navPanelContent.contains(e.target)
 
     if (isHeaderClick || isMenuContentClick) return
 
@@ -58,15 +58,15 @@ export function initHeader() {
     closeMainMenu()
   })
 
-  menuButton.addEventListener('click', () => {
-    menuCloseButton.hidden = false
-    menuMenuHeader.hidden = false
-    menuButton.hidden = true
-    languageButton.hidden = true
+  navButton.addEventListener('click', () => {
+    navCloseButton.hidden = false
+    navPanel.hidden = false
+    navButton.hidden = true
+    if (window.innerWidth < 1024) languageButton.hidden = true
     bodyDom.classList.add('is-menu-open')
   })
 
-  menuCloseButton.addEventListener('click', () => {
+  navCloseButton.addEventListener('click', () => {
     closeMainMenu()
   })
 }
