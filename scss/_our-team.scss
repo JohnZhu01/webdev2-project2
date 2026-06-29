@@ -4,6 +4,14 @@
   margin: 3rem 1rem 4rem 1rem;
   text-align: center;
 
+  @media (min-width: $large) {
+    margin-bottom: 7.75rem;
+  }
+
+  @media (min-width: $extra-large) {
+    margin-top: 6rem;
+  }
+
   p {
     margin: 0 0 1.5rem;
     font-size: 1.125rem;
