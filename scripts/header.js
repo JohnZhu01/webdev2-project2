@@ -28,6 +28,7 @@ export const initHeader = () => {
   }
 
   function closeMainMenu() {
+    navButton.setAttribute('aria-expanded', 'false')
     navCloseButton.hidden = true
     navPanel.hidden = true
     navButton.hidden = false
@@ -59,6 +60,7 @@ export const initHeader = () => {
   })
 
   navButton.addEventListener('click', () => {
+    navButton.setAttribute('aria-expanded', 'true')
     navCloseButton.hidden = false
     navPanel.hidden = false
     navButton.hidden = true

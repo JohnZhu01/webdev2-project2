@@ -6,7 +6,9 @@ export const initOurClients = () => {
 
   const carouselItemsDom = [...carouselTrackDom.children]
   carouselItemsDom.forEach(el => {
-    carouselTrackDom.appendChild(el.cloneNode(true))
+    const clonedCarouselItem = el.cloneNode(true)
+    clonedCarouselItem.setAttribute('aria-hidden', 'true')
+    carouselTrackDom.appendChild(clonedCarouselItem)
   })
 
   let pressed = false
