@@ -13,7 +13,7 @@
     flex-direction: column;
     gap: $space-lg;
 
-    @media (min-width: $medium) {
+    @media (min-width: $large) {
       flex-direction: row;
     }
   }
@@ -23,7 +23,7 @@
     gap: $space-lg;
     height: 15rem;
 
-    @media (min-width: $medium) {
+    @media (min-width: $large) {
       flex: 1;
       height: $desktop-card-height;
     }
@@ -31,7 +31,7 @@
     dt {
       font-size: 4rem;
 
-      @media (min-width: $medium) {
+      @media (min-width: $large) {
         font-size: 6rem;
       }
     }
@@ -44,7 +44,7 @@
       font-size: 1.5rem;
       line-height: 1.4;
 
-      @media (min-width: $medium) {
+      @media (min-width: $large) {
         margin-top: auto;
       }
 

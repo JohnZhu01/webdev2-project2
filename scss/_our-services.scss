@@ -12,7 +12,7 @@
     flex-direction: column;
     gap: $space-lg;
 
-    @media (min-width: $medium) {
+    @media (min-width: $large) {
       flex-direction: row;
     }
   }
@@ -29,7 +29,7 @@
     justify-content: center;
     background-color: white;
 
-    @media (min-width: $medium) {
+    @media (min-width: $large) {
       flex: 1;
       height: $desktop-card-height;
     }
@@ -46,7 +46,7 @@
       height: auto;
       align-self: center;
 
-      @media (min-width: $medium) {
+      @media (min-width: $large) {
         width: 100%;
         max-width: 12rem;
         height: 12rem;
