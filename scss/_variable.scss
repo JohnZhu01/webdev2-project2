@@ -30,7 +30,16 @@ $desktop-card-height: 42rem;
 // Mixin styles
 @mixin section-heading {
   font-family: $subheading-font;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 $space-lg;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $large) {
+    font-size: 3rem;
+  }
 }
 
 @mixin card {

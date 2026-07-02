@@ -5,13 +5,9 @@
   margin: 0;
 
   &-heading {
-    font-family: $heading-font;
-    font-weight: 500;
-    font-size: $space-lg;
+    @include section-heading;
     color: $text-color;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0 0 2.45rem;
+    margin-bottom: 2.45rem;
   }
 
   &-intro {
@@ -148,10 +144,6 @@
 @media (min-width: 1920px) {
   .contact-us {
     padding: 4.5rem 0 5rem;
-
-    &-heading {
-      font-size: 3rem;
-    }
 
     &-intro {
       margin-bottom: 3.25rem;

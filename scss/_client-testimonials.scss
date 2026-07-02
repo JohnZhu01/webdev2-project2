@@ -7,12 +7,8 @@
   color: $text-color;
 
   &-heading {
-    margin: 0 0 3rem;
-    font-family: $subheading-font;
-    font-size: 0.8125rem;
-    font-weight: 400;
-    text-align: center;
-    text-transform: uppercase;
+    @include section-heading;
+    margin-bottom: 3rem;
   }
 
   .testimonial-card {
